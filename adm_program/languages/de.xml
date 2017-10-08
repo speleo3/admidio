@@ -34,19 +34,19 @@
     <string name="CAT_MOVE_DOWN">#VAR1# nach unten verschieben</string>
     <string name="CAT_MOVE_UP">#VAR1# nach oben verschieben</string>
     <!-- Phrases only in Datesmodule -->
-    <string name="DAT_ADD_DATE_TO_CALENDAR">Termin in den Kalender übernehmen</string>
+    <string name="DAT_ADD_DATE_TO_CALENDAR">Termin bei Höhle eintragen</string>
     <string name="DAT_ALL_DAY">Ganztägig</string>
     <string name="DAT_ASSIGN_PARTICIPANTS">Teilnehmer zuordnen</string>
     <string name="DAT_ATTEND">Teilnehmen</string>
     <string name="DAT_ATTEND_DATE">Du hast deine Teilnahme für den Termin #VAR1_BOLD# am #VAR2# zugesagt.</string>
-    <string name="DAT_CALENDAR">Kalender</string>
+    <string name="DAT_CALENDAR">Höhle</string>
     <string name="DAT_CANCEL">Absagen</string>
     <string name="DAT_CANCEL_DATE">Du hast deine Teilnahme für den Termin #VAR1_BOLD# am #VAR2# wieder abgesagt.</string>
     <string name="DAT_CURRENT_DATES_OF_ORGA">Aktuelle Termine der Organisation #VAR1#</string>
     <string name="DAT_DATE">Termin</string>
     <string name="DAT_DATES">Termine</string>
     <string name="DAT_DATES_DESC">Termine können hier angelegt und angeschaut werden. Benutzer können sich auf Wunsch zu diesen Terminen anmelden.</string>
-    <string name="DAT_EDIT_CALENDAR_DESC">Hier können Kalender angelegt und bearbeitet werden.</string>
+    <string name="DAT_EDIT_CALENDAR_DESC">Hier können Höhlen angelegt und bearbeitet werden.</string>
     <string name="DAT_EDIT_ROOMS">Räume bearbeiten</string>
     <string name="DAT_EDIT_ROOMS_DESC">Hier können Räume für Veranstaltungen angelegt und bearbeitet werden.</string>
     <string name="DAT_EMAIL_NOTIFICATION_CHANGE_TITLE">Ein Termin wurde geändert</string>
@@ -69,7 +69,7 @@
     <string name="DAT_LOCATION_LINK">Werden genügend Informationen (Straße, Stadt, Lokalität) zum Ort des Termins eingegeben, so kann ein Link bzw. eine Route zu diesem Treffpunkt über Google-Maps erstellt werden.</string>
     <string name="DAT_LOGIN_POSSIBLE">Hier kann ausgewählt werden, ob eine Anmeldung zu dem angegebenen Termin möglich sein soll oder nicht.\nFalls die Anmeldung nachträglich gelöscht wird, werden auch alle bisherigen Teilnehmer vom Termin entfernt.\nWenn man hingegen nur die Anmeldung für neue Teilnehmer beenden möchte, so kann man die derzeitige Teilnehmerzahl als Teilnahmebegrenzung eintragen.</string>
     <string name="DAT_MAINTAIN_CATEGORIES_DESC">Hier können Kategorien angelegt und bearbeitet werden.</string>
-    <string name="DAT_MANAGE_CALENDARS">Kalender verwalten</string>
+    <string name="DAT_MANAGE_CALENDARS">Höhlen verwalten</string>
     <string name="DAT_MAX_MEMBERS">Hier kann die Teilnehmeranzahl für diesen Termin beschränkt werden. Soll die Anzahl nicht begrenzt werden, so kann dieses Feld leer gelassen werden.</string>
     <string name="DAT_PARTICIPANTS_LIMIT">Teilnehmerbegrenzung</string>
     <string name="DAT_PARTICIPATE_AT_DATE">An Termin als Organisator teilnehmen</string>
@@ -90,7 +90,7 @@
     <string name="DAT_SHOW_MAP_LINK_DESC">Wird ein Ort angegeben, so wird versucht ein Link zu Google-Maps zu erstellen, welcher den Ort anzeigt, sowie eine Routenlink ausgehend vom eigenen Wohnort. (Standard: ja)</string>
     <string name="DAT_SHOW_ON_MAP">Auf Karte zeigen</string>
     <string name="DAT_SHOW_PARTICIPANTS">Teilnehmer anzeigen</string>
-    <string name="DAT_SWITCH_TO_CALENDAR_ADMINISTRATION">Wechsel zur Kalenderverwaltung</string>
+    <string name="DAT_SWITCH_TO_CALENDAR_ADMINISTRATION">Wechsel zur Höhlenverwaltung</string>
     <string name="DAT_SWITCH_TO_ROOM_ADMINISTRATION">Wechsel zur Raumverwaltung</string>
     <string name="DAT_VIEW_MODE">Standard-Darstellung</string>
     <string name="DAT_VIEW_MODE_DESC">Anzeigeart der Termine. Im Modus #VAR1_BOLD# werden sämtliche Informationen eines Termins in einer Box angezeigt. Im Modus #VAR2_BOLD# werden die wichtigsten Termininformationen in einer kompakten Liste dargestellt. (Standard: Detailiert)</string>
@@ -1230,7 +1230,7 @@
     <string name="SYS_ONLINE_MEMBERSHIP_ADMINISTRATION">Die Online-Mitgliederverwaltung</string>
     <string name="SYS_OPTIONAL">Optional</string>
     <string name="SYS_ORDER">Reihenfolge</string>
-    <string name="SYS_ORGANIZATION">Organisation</string>
+    <string name="SYS_ORGANIZATION">Verein/Projekt</string>
     <string name="SYS_OVERVIEW">Übersicht</string>
     <string name="SYS_PAGE">Seite</string>
     <string name="SYS_PAGE_PREVIOUS">Vorherige</string>
@@ -1304,7 +1304,7 @@
     <string name="SYS_SERVER_NO_UPLOAD">Die Servereinstellungen lassen leider keine Dateiuploads zu.</string>
     <string name="SYS_SET_BY">Gesetzt durch</string>
     <string name="SYS_SETTINGS">Einstellungen</string>
-    <string name="SYS_SHOW_CALENDAR">Kalender anzeigen</string>
+    <string name="SYS_SHOW_CALENDAR">Höhle anzeigen</string>
     <string name="SYS_SHOW_PROFILE">Profil anzeigen</string>
     <string name="SYS_SHOW_ROUTE">Route anzeigen</string>
     <string name="SYS_SIMILAR_USERS_FOUND">Es wurden bereits Benutzer mit ähnlichem Namen wie #VAR1_BOLD# in der Datenbank gefunden.</string>

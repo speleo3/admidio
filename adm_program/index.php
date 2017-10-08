@@ -56,6 +56,24 @@ else
 // menu with links to all modules of Admidio
 $moduleMenu = new Menu('index_modules', $gL10n->get('SYS_MODULES'));
 
+if($gPreferences['enable_dates_module'] == 1
+|| ($gPreferences['enable_dates_module'] == 2 && $gValidLogin))
+{
+    $moduleMenu->addItem('dates', ADMIDIO_URL . FOLDER_MODULES . '/dates/dates.php',
+                         $gL10n->get('DAT_DATES'), '/icons/dates_big.png',
+                         $gL10n->get('DAT_DATES_DESC'));
+    $moduleMenu->addSubItem('dates', 'olddates', FOLDER_MODULES . '/dates/dates.php?mode=old',
+                            $gL10n->get('DAT_PREVIOUS_DATES', $gL10n->get('DAT_DATES')));
+}
+
+if($gPreferences['enable_photo_module'] == 1
+|| ($gPreferences['enable_photo_module'] == 2 && $gValidLogin))
+{
+    $moduleMenu->addItem('photo', FOLDER_MODULES . '/photos/photos.php',
+                         $gL10n->get('PHO_PHOTOS'), '/icons/photo_big.png',
+                         $gL10n->get('PHO_PHOTOS_DESC'));
+}
+
 if($gPreferences['enable_announcements_module'] == 1
 || ($gPreferences['enable_announcements_module'] == 2 && $gValidLogin))
 {
@@ -92,13 +110,6 @@ if(($gPreferences['enable_pm_module'] == 1 || $gPreferences['enable_mail_module'
                          $gL10n->get('SYS_MESSAGES') . $unreadBadge, '/icons/messages_big.png',
                          $gL10n->get('MAI_EMAIL_DESC'));
 }
-if($gPreferences['enable_photo_module'] == 1
-|| ($gPreferences['enable_photo_module'] == 2 && $gValidLogin))
-{
-    $moduleMenu->addItem('photo', FOLDER_MODULES . '/photos/photos.php',
-                         $gL10n->get('PHO_PHOTOS'), '/icons/photo_big.png',
-                         $gL10n->get('PHO_PHOTOS_DESC'));
-}
 if($gPreferences['enable_guestbook_module'] == 1
 || ($gPreferences['enable_guestbook_module'] == 2 && $gValidLogin))
 {
@@ -115,15 +126,6 @@ if($gValidLogin)
                             $gL10n->get('LST_MY_LIST'));
     $moduleMenu->addSubItem('lists', 'rolinac', FOLDER_MODULES . '/lists/lists.php?active_role=0',
                             $gL10n->get('ROL_INACTIV_ROLE'));
-}
-if($gPreferences['enable_dates_module'] == 1
-|| ($gPreferences['enable_dates_module'] == 2 && $gValidLogin))
-{
-    $moduleMenu->addItem('dates', ADMIDIO_URL . FOLDER_MODULES . '/dates/dates.php',
-                         $gL10n->get('DAT_DATES'), '/icons/dates_big.png',
-                         $gL10n->get('DAT_DATES_DESC'));
-    $moduleMenu->addSubItem('dates', 'olddates', FOLDER_MODULES . '/dates/dates.php?mode=old',
-                            $gL10n->get('DAT_PREVIOUS_DATES', $gL10n->get('DAT_DATES')));
 }
 if($gPreferences['enable_weblinks_module'] == 1
 || ($gPreferences['enable_weblinks_module'] == 2 && $gValidLogin))

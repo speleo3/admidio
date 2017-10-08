@@ -10,7 +10,7 @@
  */
 
 // Zeit in der die User noch als Aktiv gelten (Default = 10)
-$plg_time_online = 10;
+$plg_time_online = 3;
 
 // Sollen Besucher (nicht eingeloggte Benutzer) auch angezeigt werden
 // 0 = nur eingeloggte Mitglieder werden angezeigt
@@ -25,7 +25,7 @@ $plg_show_self = 1;
 // Anzeige der Benutzernamen untereinander bzw. nebeneinander
 // 0 = (Default) Benutzernamen untereinander auflisten (1 Name pro Zeile)
 // 1 = Benutzernamen nebeneinander auflisten
-$plg_show_users_side_by_side = 0;
+$plg_show_users_side_by_side = 1;
 
 // Name einer CSS-Klasse fuer Links
 // Nur noetig, falls die Links ein anderes Aussehen bekommen sollen
@@ -41,4 +41,4 @@ $plg_online_text = 'Online sind:<br />';
 // Soll die Überschrift des Plugins angezeigt werden
 // 1 = (Default) Überschrift wird angezeigt
 // 0 = Überschrift wird nicht angezeigt
-$plg_show_headline = 1;
+$plg_show_headline = 0;
