@@ -314,6 +314,8 @@ $form->openGroupBox('gb_description', $gL10n->get('SYS_DESCRIPTION'), 'admidio-p
 $form->addEditor('dat_description', '', $date->getValue('dat_description'));
 $form->closeGroupBox();
 
+$form->addCheckbox('grabi_mitglied_email_notification', 'Infomail an alle Mitglieder senden', true);
+
 $form->addSubmitButton('btn_save', $gL10n->get('SYS_SAVE'), array('icon' => THEME_URL.'/icons/disk.png'));
 $form->addHtml(admFuncShowCreateChangeInfoById($date->getValue('dat_usr_id_create'), $date->getValue('dat_timestamp_create'), $date->getValue('dat_usr_id_change'), $date->getValue('dat_timestamp_change')));
 
