@@ -40,7 +40,7 @@
     <string name="CAT_PROFILE_FIELDS_VISIBILITY">Die Sichtbarkeit der Profilfelder dieser Kategorie kann für andere Benutzer unterbunden werden, allerdings bleiben die Profilfelder im eigenen Profil weiterhin sichtbar und können dort auch bearbeitet werden.</string>
     <string name="CAT_ONLY_PARENT_ORGANIZATION">Diese Kategorie ist für alle Organisationen sichtbar und darf aus diesem Grund nur von der Elternorganisation bearbeitet werden.</string>
     <!-- Phrases only in Datesmodule -->
-    <string name="DAT_ADD_DATE_TO_CALENDAR">Termin in den Kalender übernehmen</string>
+    <string name="DAT_ADD_DATE_TO_CALENDAR">Termin bei Höhle eintragen</string>
     <string name="DAT_ALL_DAY">Ganztägig</string>
     <string name="DAT_ALLOW_ADDITIONAL_GUESTS">Teilnehmer können anonyme Gäste anmelden</string>
     <string name="DAT_ALLOW_ADDITIONAL_GUESTS_DESC">Teilnehmer können zu ihrer Anmeldung weitere zusätzliche Plätze belegen. Diese werden dann von der maximalen Teilnehmerzahl abgezogen und die übrigen freien Plätze werden dadurch reduziert. Dies ist z.B. sinnvoll, wenn ein Teilnehmer weitere Besucher mitbringen kann und dadurch eine Gesamtanzahl von freien Plätzen benötigt.  </string>
@@ -50,7 +50,7 @@
     <string name="DAT_ATTEND">Teilnehmen</string>
     <string name="DAT_ATTEND_DATE">Du hast die Teilnahme für den Termin #VAR1_BOLD# am #VAR2# zugesagt.</string>
     <string name="DAT_ATTEND_POSSIBLY">Du hast die Teilnahme für den Termin #VAR1_BOLD# am #VAR2# unter Vorbehalt zugesagt.</string>
-    <string name="DAT_CALENDAR">Kalender</string>
+    <string name="DAT_CALENDAR">Höhle</string>
     <string name="DAT_CANCEL">Absagen</string>
     <string name="DAT_CANCEL_DATE">Du hast die Teilnahme für den Termin #VAR1_BOLD# am #VAR2# wieder abgesagt.</string>
     <string name="DAT_CURRENT_DATES_OF_ORGA">Aktuelle Termine der Organisation #VAR1#</string>
@@ -62,7 +62,7 @@
     <string name="DAT_DEADLINE_DESC">Teilnehmer können sich bis zu diesem Datum am Termin anmelden. Leiter und Benutzer mit dem Recht Termine zu bearbeiten können weiterhin Teilnehmer zuordnen. Wenn kein Datumswert angegeben wird, dann wird als Default das Startdatum des Termins als Anmeldeschluss angenommen.</string>
     <string name="DAT_DEFAULT_LIST_CONFIGURATION">Standardkonfiguration  der Teilnehmerliste</string>
     <string name="DAT_DEFAULT_LIST_CONFIGURATION_DESC">Eine der hier vorgegebenen Konfigurationen kann zur Standardkonfiguration für die Teilnehmerliste an Terminen dieser Organisation gemacht werden. Teilnehmer von Terminen werden mit dieser Konfiguration angezeigt.</string>
-    <string name="DAT_EDIT_CALENDAR_DESC">Hier können Kalender angelegt und bearbeitet werden.</string>
+    <string name="DAT_EDIT_CALENDAR_DESC">Hier können Höhlen angelegt und bearbeitet werden.</string>
     <string name="DAT_EDIT_EVENTS">Termine bearbeiten</string>
     <string name="DAT_EDIT_ROOMS">Räume bearbeiten</string>
     <string name="DAT_EDIT_ROOMS_DESC">Hier können Räume für Veranstaltungen angelegt und bearbeitet werden.</string>
@@ -87,7 +87,7 @@
     <string name="DAT_LOCATION_LINK">Werden genügend Informationen (Straße, Stadt, Lokalität) zum Ort des Termins eingegeben, so kann ein Link bzw. eine Route zu diesem Treffpunkt über Google-Maps erstellt werden.</string>
     <string name="DAT_LOGIN_POSSIBLE">Hier kann ausgewählt werden, ob eine Anmeldung zu dem angegebenen Termin möglich sein soll oder nicht.\nFalls die Anmeldung nachträglich gelöscht wird, werden auch alle bisherigen Teilnehmer vom Termin entfernt.\nWenn man hingegen nur die Anmeldung für neue Teilnehmer beenden möchte, so kann man die derzeitige Teilnehmerzahl als Teilnahmebegrenzung eintragen.</string>
     <string name="DAT_MAINTAIN_CATEGORIES_DESC">Hier können Kategorien angelegt und bearbeitet werden.</string>
-    <string name="DAT_MANAGE_CALENDARS">Kalender verwalten</string>
+    <string name="DAT_MANAGE_CALENDARS">Höhlen verwalten</string>
     <string name="DAT_MAX_MEMBERS">Hier kann die Teilnehmeranzahl für diesen Termin beschränkt werden. Soll die Anzahl nicht begrenzt werden, so kann dieses Feld leer gelassen werden.</string>
     <string name="DAT_PARTICIPANTS_LIMIT">Teilnehmerbegrenzung</string>
     <string name="DAT_PARTICIPATE_NO_RIGHTS">Du besitzt nicht das Recht dich für diesen Termin anzumelden.</string>
@@ -113,7 +113,7 @@
     <string name="DAT_SHOW_MAP_LINK_DESC">Wird ein Ort angegeben, so wird versucht ein Link zu Google-Maps zu erstellen, welcher den Ort anzeigt, sowie eine Routenlink ausgehend vom eigenen Wohnort. (Standard: ja)</string>
     <string name="DAT_SHOW_ON_MAP">Auf Karte zeigen</string>
     <string name="DAT_SHOW_PARTICIPANTS">Teilnehmer anzeigen</string>
-    <string name="DAT_SWITCH_TO_CALENDAR_ADMINISTRATION">Wechsel zur Kalenderverwaltung</string>
+    <string name="DAT_SWITCH_TO_CALENDAR_ADMINISTRATION">Wechsel zur Höhlenverwaltung</string>
     <string name="DAT_SWITCH_TO_ROOM_ADMINISTRATION">Wechsel zur Raumverwaltung</string>
     <string name="DAT_VIEW_MODE">Standard-Darstellung</string>
     <string name="DAT_USER_ATTEND">Ich nehme teil</string>
@@ -1298,7 +1298,7 @@
     <string name="SYS_ONLINE_MEMBERSHIP_ADMINISTRATION">Die Online-Mitgliederverwaltung</string>
     <string name="SYS_OPTIONAL">Optional</string>
     <string name="SYS_ORDER">Reihenfolge</string>
-    <string name="SYS_ORGANIZATION">Organisation</string>
+    <string name="SYS_ORGANIZATION">Verein/Projekt</string>
     <string name="SYS_OVERVIEW">Übersicht</string>
     <string name="SYS_PAGE">Seite</string>
     <string name="SYS_PAGE_PREVIOUS">Vorherige</string>
@@ -1374,7 +1374,7 @@
     <string name="SYS_SERVER">Server</string>
     <string name="SYS_SERVER_NO_UPLOAD">Die Servereinstellungen lassen leider keine Dateiuploads zu.</string>
     <string name="SYS_SETTINGS">Einstellungen</string>
-    <string name="SYS_SHOW_CALENDAR">Kalender anzeigen</string>
+    <string name="SYS_SHOW_CALENDAR">Höhle anzeigen</string>
     <string name="SYS_SHOW_PROFILE">Profil anzeigen</string>
     <string name="SYS_SHOW_ROUTE">Route anzeigen</string>
     <string name="SYS_SIMILAR_USERS_FOUND">Es wurden bereits Benutzer mit ähnlichem Namen wie #VAR1_BOLD# in der Datenbank gefunden.</string>

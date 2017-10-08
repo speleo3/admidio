@@ -10,7 +10,7 @@
  */
 
 // Time in minutes in which the users are still active (Default = 10)
-$plg_time_online = 10;
+$plg_time_online = 3;
 
 // Should visitors (users who are not logged in) also be displayed
 // 0 = only logged in members will be shown
@@ -31,7 +31,7 @@ $plg_show_self = 1;
 // Display of user names with each other or side by side
 // 0 = (Default) List user names (1 name per line)
 // 1 = List user names side by side
-$plg_show_users_side_by_side = 0;
+$plg_show_users_side_by_side = 1;
 
 // Name of a CSS class for links
 // Only necessary, if the links should get a different look
@@ -44,4 +44,4 @@ $plg_link_target = '_self';
 // Should the header of the plugin be displayed
 // 1 = (Default) Headline is displayed
 // 0 = Headline is not displayed
-$plg_show_headline = 1;
+$plg_show_headline = 0;
