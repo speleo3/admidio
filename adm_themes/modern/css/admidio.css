@@ -337,8 +337,6 @@ a.btn {
     border-right: 0;
     border-color: #7d7d7d;
     background-color: #96c4cb;
-    background: -webkit-linear-gradient(top, #ffffff 1%, #303030 99%);
-    background: linear-gradient(to bottom, #ffffff 1%, #303030 99%);
 }
 
 .nav > li > a {
@@ -847,6 +845,16 @@ tr.admidio-event-highlight,
 }
 
 /* Plugin area */
+
+.admidio-plugin-content {
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #ddd;
+}
+
+.admidio-plugin-content h3 {
+    margin-top: 0;
+}
 
 .admidio-plugin-content > div > a {
     white-space: normal;
