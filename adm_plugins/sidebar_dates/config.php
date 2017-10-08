@@ -10,7 +10,7 @@
  */
 
 // Anzahl der Termine, die angezeigt werden sollen (Default = 2)
-$plg_dates_count = 2;
+$plg_dates_count = 5;
 
 // Bis-Uhrzeit/Datum anzeigen
 // 0 = Bis-Uhrzeit und Datum nicht anzeigen
@@ -20,7 +20,7 @@ $plg_show_date_end = 1;
 // Soll ein Vorschau-Text der Ankündigung gezeigt werden?
 // 0 = keine Voranzeige
 // >0 = Anzahl Zeichen des Vorschau-Textes
-$plg_dates_show_preview = 70;
+$plg_dates_show_preview = 0;
 
 // If this option is set to true (1) than the full content of the
 // description will be shown. Also images and other html content.
