@@ -95,8 +95,6 @@ if ($gPreferences['enable_download_module'] == 1)
         {
             $errorCode = '';
 
-            echo '<div class="btn-group-vertical" role="group">';
-
             try
             {
                 // get recordset of current file from database
@@ -117,6 +115,8 @@ if ($gPreferences['enable_download_module'] == 1)
             // only show download if user has rights to view folder
             if($errorCode !== 'DOW_FOLDER_NO_RIGHTS')
             {
+                echo '<div class="btn-group-vertical" role="group">';
+
                 // get filename without extension and extension separatly
                 $fileName      = substr($rowFile->fil_name, 0, strrpos($rowFile->fil_name, '.'));
                 $fileExtension = admStrToLower(substr($rowFile->fil_name, strrpos($rowFile->fil_name, '.')+1));
@@ -150,13 +150,13 @@ if ($gPreferences['enable_download_module'] == 1)
                 <a class="btn admidio-icon-link '.$plg_link_class_downl.'" data-toggle="tooltip" data-html="true" title="'. $tooltip. '" href="'. ADMIDIO_URL. FOLDER_MODULES. '/downloads/get_file.php?file_id='. $rowFile->fil_id. '"><img
                     src="'. THEME_URL. '/icons/'.$iconFile.'" alt="'. $fullFolderFileName. '/" />'.$fileName.'.'.$fileExtension. '</a>';
 
+                echo '</div>';
+
                 if($countVisibleDownloads === $plg_downloads_count)
                 {
                     break;
                 }
             }
-
-            echo '</div>';
         }
     }
 
