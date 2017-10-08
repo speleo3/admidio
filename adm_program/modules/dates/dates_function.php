@@ -88,6 +88,60 @@ if (in_array($getMode, array(1, 2, 5), true))
     }
 }
 
+/*
+ * Get an array of email addresses for a group name.
+ *
+ * Code inspired by messages module:
+ * adm_program/modules/messages/messages_send.php
+ */
+function get_group_email_addresses($rol_name_)
+{
+    global $gProfileFields, $gCurrentOrganization, $gDb;
+
+    $receiver = array();
+
+    $sqlConditions = ' AND mem_begin  <= \''.DATE_NOW.'\'
+                       AND mem_end     > \''.DATE_NOW.'\' ';
+
+    $sql = 'SELECT email.usd_value AS email
+              FROM '.TBL_MEMBERS.'
+        INNER JOIN '.TBL_ROLES.'
+                ON rol_id = mem_rol_id
+        INNER JOIN '.TBL_CATEGORIES.'
+                ON cat_id = rol_cat_id
+        INNER JOIN '.TBL_USERS.'
+                ON usr_id = mem_usr_id
+        INNER JOIN '.TBL_USER_DATA.' AS email
+                ON email.usd_usr_id = usr_id
+               AND email.usd_usf_id = '. $gProfileFields->getProperty('EMAIL', 'usf_id'). '
+               AND LENGTH(email.usd_value) > 0
+             WHERE rol_name = \''. $rol_name_ .'\'
+               AND (  cat_org_id  = '. $gCurrentOrganization->getValue('org_id'). '
+                   OR cat_org_id IS NULL )
+               AND usr_valid   = 1 '.
+                   $sqlConditions;
+
+    $statement = $gDb->query($sql);
+
+    if ($statement->rowCount() > 0)
+    {
+        while ($row = $statement->fetchObject())
+        {
+            $receiver[] = $row->email;
+        }
+    }
+
+    return $receiver;
+}
+
+function email_add_group_BCC($email, $groupName)
+{
+    foreach (get_group_email_addresses($groupName) as $address)
+    {
+        $email->addBlindCopy($address);
+    }
+}
+
 if($getMode === 1 || $getMode === 5)  // Create a new event or edit an existing event
 {
     $_SESSION['dates_request'] = $_POST;
@@ -449,6 +503,11 @@ if($getMode === 1 || $getMode === 5)  // Create a new event or edit an existing 
         try
         {
             $notification = new Email();
+
+            if (!empty($_POST['grabi_mitglied_email_notification']))
+            {
+                email_add_group_BCC($notification, 'Mitglied');
+            }
 
             if($getMode === 1)
             {
