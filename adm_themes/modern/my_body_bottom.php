@@ -10,6 +10,11 @@
                 <?php
 
                 include(ADMIDIO_PATH . FOLDER_PLUGINS . '/login_form/login_form.php');
+                include(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_online/sidebar_online.php');
+                include(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_dates/sidebar_dates.php');
+                include(ADMIDIO_PATH . FOLDER_PLUGINS . '/calender/calendar.php');
+                include(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_announcements/sidebar_announcements.php');
+                include(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_downloads/sidebar_downloads.php');
 
                 ?>
                 <div id="plugin_menu" class="admidio-plugin-content">
@@ -20,6 +25,20 @@
 
                     $moduleMenu->addItem('overview', '/adm_program/index.php',
                                          $gL10n->get('SYS_OVERVIEW'), '/icons/home.png');
+
+                    if($gPreferences['enable_dates_module'] == 1
+                    || ($gPreferences['enable_dates_module'] == 2 && $gValidLogin))
+                    {
+                        $moduleMenu->addItem('dates', FOLDER_MODULES . '/dates/dates.php',
+                                             $gL10n->get('DAT_DATES'), '/icons/dates.png');
+                    }
+
+                    if($gPreferences['enable_photo_module'] == 1
+                    || ($gPreferences['enable_photo_module'] == 2 && $gValidLogin))
+                    {
+                        $moduleMenu->addItem('photo', FOLDER_MODULES . '/photos/photos.php',
+                                             $gL10n->get('PHO_PHOTOS'), '/icons/photo.png');
+                    }
 
                     if($gPreferences['enable_announcements_module'] == 1
                     || ($gPreferences['enable_announcements_module'] == 2 && $gValidLogin))
@@ -53,12 +72,6 @@
                         $moduleMenu->addItem('private_message', FOLDER_MODULES . '/messages/messages.php',
                                              $gL10n->get('SYS_MESSAGES') . $unreadBadge, '/icons/messages.png');
                     }
-                    if($gPreferences['enable_photo_module'] == 1
-                    || ($gPreferences['enable_photo_module'] == 2 && $gValidLogin))
-                    {
-                        $moduleMenu->addItem('photo', FOLDER_MODULES . '/photos/photos.php',
-                                             $gL10n->get('PHO_PHOTOS'), '/icons/photo.png');
-                    }
                     if($gPreferences['enable_guestbook_module'] == 1
                     || ($gPreferences['enable_guestbook_module'] == 2 && $gValidLogin))
                     {
@@ -73,13 +86,6 @@
                     {
                         $moduleMenu->addItem('mylist', FOLDER_MODULES . '/lists/mylist.php',
                                              $gL10n->get('LST_MY_LIST'), '/icons/mylist.png');
-                    }
-
-                    if($gPreferences['enable_dates_module'] == 1
-                    || ($gPreferences['enable_dates_module'] == 2 && $gValidLogin))
-                    {
-                        $moduleMenu->addItem('dates', FOLDER_MODULES . '/dates/dates.php',
-                                             $gL10n->get('DAT_DATES'), '/icons/dates.png');
                     }
 
                     if($gPreferences['enable_weblinks_module'] == 1
