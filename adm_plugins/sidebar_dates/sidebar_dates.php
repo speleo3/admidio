@@ -95,6 +95,7 @@ if(!isset($plg_link_url) || $plg_link_url === '')
 
 // create Object
 $plgDates = new ModuleDates();
+$plgDates->setParameter('show', 'all');
 
 // read events for output
 $plgDates->setDateRange();
