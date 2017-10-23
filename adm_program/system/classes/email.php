@@ -294,6 +294,9 @@ class Email extends PHPMailer
         );
         $text = str_replace(array_keys($replaceArray), array_values($replaceArray), $text);
 
+        // \n after <br>
+        $text = preg_replace('!(<br ?/?>)\s*!', "\\1\n", $text);
+
         $this->emText .= strip_tags($text);
         $this->emHtmlText .= $text;
     }
@@ -380,11 +383,6 @@ class Email extends PHPMailer
             if($gPreferences['mail_html_registered_users'] == 1)
             {
                 $this->sendDataAsHtml();
-            }
-            else
-            {
-                // html linebreaks should be converted in simple linefeed
-                $message = str_replace('<br />', "\n", $message);
             }
 
             // Set Text
