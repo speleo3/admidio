@@ -250,11 +250,6 @@ class Email extends PHPMailer
         {
             $this->sendDataAsHtml();
         }
-        else
-        {
-            // html linebreaks should be converted in simple linefeed
-            $message = str_replace('<br />', "\n", $message);
-        }
 
         // Set Text
         $this->setText($message);
@@ -372,6 +367,9 @@ class Email extends PHPMailer
         // Erst mal die Zeilenumbrueche innerhalb des Mailtextes umwandeln in einfache Umbrueche
         // statt \r\n nur noch \n
         $text = str_replace("\r\n", "\n", $text);
+
+        // \n after <br>
+        $text = preg_replace('!(<br ?/?>)\s*!', "\\1\n", $text);
 
         $this->emText .= strip_tags($text);
         $this->emHtmlText .= $text;
