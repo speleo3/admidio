@@ -29,12 +29,16 @@
  * @link http://www.phpcaptcha.org/Securimage_Docs/ Online Documentation
  * @copyright 2012 Drew Phillips
  * @author Drew Phillips <drew@drew-phillips.com>
- * @version 3.5.2 (Feb 15, 2014)
+ * @version 3.6.5 (Dec 4 2016)
  * @package Securimage
  *
  */
 
 require_once dirname(__FILE__) . '/securimage.php';
+
+// ***** START ADMIDIO CODE *****
+require_once('../../system/common.php');
+// ***** END ADMIDIO CODE *****
 
 // if using database, adjust these options as necessary and change $img = new Securimage(); to $img = new Securimage($options);
 // see test.mysql.php or test.sqlite.php for examples
@@ -45,12 +49,7 @@ $options = array(
     'database_driver' => Securimage::SI_DRIVER_MYSQL
 );
 
-// ***** START ADMIDIO CODE *****
-require_once('../../system/common.php');
-// ***** END ADMIDIO CODE *****
-
 $img = new Securimage();
-
 
 // Other audio settings
 //$img->audio_use_sox   = true;
