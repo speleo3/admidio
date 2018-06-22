@@ -113,21 +113,26 @@ function get_group_email_addresses($rol_name_)
                 ON usr_id = mem_usr_id
         INNER JOIN '.TBL_USER_DATA.' AS email
                 ON email.usd_usr_id = usr_id
-               AND email.usd_usf_id = '. $gProfileFields->getProperty('EMAIL', 'usf_id'). '
+               AND email.usd_usf_id = ? -- EMAIL usf_id
                AND LENGTH(email.usd_value) > 0
              WHERE rol_name = \''. $rol_name_ .'\'
-               AND (  cat_org_id  = '. $gCurrentOrganization->getValue('org_id'). '
+               AND (  cat_org_id  = ? -- org_id
                    OR cat_org_id IS NULL )
                AND usr_valid   = 1 '.
                    $sqlConditions;
 
-    $statement = $gDb->query($sql);
+    $queryParams = array(
+        $gProfileFields->getProperty('EMAIL', 'usf_id'),
+        $gCurrentOrganization->getValue('org_id')
+    );
+
+    $statement = $gDb->queryPrepared($sql, $queryParams);
 
     if ($statement->rowCount() > 0)
     {
-        while ($row = $statement->fetchObject())
+        while ($row = $statement->fetch())
         {
-            $receiver[] = $row->email;
+            $receiver[] = $row['email'];
         }
     }
 
