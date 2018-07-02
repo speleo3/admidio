@@ -208,6 +208,11 @@ class Language
      */
     public function getCountryName($countryIsoCode)
     {
+        if (empty($countryIsoCode))
+        {
+            return '';
+        }
+
         if (!preg_match('/^[A-Z]{3}$/', $countryIsoCode))
         {
             throw new \UnexpectedValueException('Invalid country-iso-code!');
