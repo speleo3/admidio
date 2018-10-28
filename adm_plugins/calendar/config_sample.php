@@ -3,12 +3,8 @@
  ***********************************************************************************************
  * Configuration file for Admidio plugin Calendar
  *
- * Version 2.0.3
- *
- * Plugin das den aktuellen Monatskalender auflistet und die Termine und Geburtstage
- * des Monats markiert und so ideal in einer Seitenleiste eingesetzt werden kann
- *
- * Compatible with Admidio version 3.0
+ * Rename this file to config.php if you want to change some of the preferences below. The plugin
+ * will only read the parameters from config.php and not the example file.
  *
  * @copyright 2004-2018 The Admidio Team
  * @see https://www.admidio.org/
@@ -50,7 +46,7 @@ $plg_geb_displayNames = 1;
 // Mehrere Einträge: $plg_kal_cat = array('abc','cdf')
 // Achtung: Seit Admidio 2.2 und dermit verbundenen Mehrsprachigkeit haben die Standardkalender
 // folgende interne Bezeichnungen: "Allgemein" = "SYS_COMMON", "Training" = "INS_TRAINING", "Kurse" = "INS_COURSES"
-$plg_kal_cat =  array('all');
+$plg_kal_cat = array('all');
 
 // Soll die Kategorie des Kalenders mit ausgegeben werden (1) Ja oder (0) Nein
 $plg_kal_cat_show = 0;

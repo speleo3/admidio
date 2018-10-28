@@ -1,7 +1,10 @@
 <?php
 /**
  ***********************************************************************************************
- * Configuration file for Admidio plugin Sidebar-Announcements
+ * Configuration file for Admidio plugin Random Photo
+ *
+ * Rename this file to config.php if you want to change some of the preferences below. The plugin
+ * will only read the parameters from config.php and not the example file.
  *
  * @copyright 2004-2018 The Admidio Team
  * @see https://www.admidio.org/
@@ -9,19 +12,29 @@
  ***********************************************************************************************
  */
 
-// Anzahl der Termine, die angezeigt werden sollen (Default = 2)
-$plg_announcements_count = 2;
+// Maximale Anzahl von Zeichen in einem Wort,
+// bevor ein Zeilenumbruch kommt (Default = 0 (deaktiviert))
+$plg_max_char_per_word = 0;
 
-// Soll ein Vorschau-Text der Ankündigung gezeigt werden?
-// 0 = keine Voranzeige
-// 70 = Anzahl Zeichen des Vorschau-Textes
-$plg_show_preview = 70;
+// Maximale Photobreite
+// Angabe in px, (Default = 150)
+$plg_photos_max_width = 150;
 
-// If this option is set to true (1) than the full content of the
-// description will be shown. Also images and other html content.
-// 0 = only show text preview of description
-// 1 = show full html content of description
-$plgShowFullDescription = 0;
+// Maximale Photohoehe
+// Angabe in px, (Default = 200)
+$plg_photos_max_height = 200;
+
+// Zahl der Alben aus denen das Foto kommen darf, gezählt wird ab dem Aktuellsten
+// Default = 0 (Keine Einschraenkung)
+$plg_photos_albums = 0;
+
+// Bildauswahl
+// 0 : (Default) Zufallsbild
+// 1 : erstes Bild etc.
+$plg_photos_picnr = 0;
+
+// Soll der Link zum Album unter dem Bild angezeigt werden?
+$plg_photos_show_link = true;
 
 // Name einer CSS-Klasse fuer Links
 // Nur noetig, falls die Links ein anderes Aussehen bekommen sollen
@@ -31,15 +44,7 @@ $plg_link_class = '';
 // Hier koennen die ueblichen targets (_self, _top ...) oder Framenamen angegeben werden
 $plg_link_target = '_self';
 
-// Maximale Anzahl von Zeichen in einem Wort,
-// bevor ein Zeilenumbruch kommt (Default = 0 (deaktiviert))
-$plg_max_char_per_word = 0;
-
 // Soll die Überschrift des Plugins angezeigt werden
 // 1 = (Default) Überschrift wird angezeigt
 // 0 = Überschrift wird nicht angezeigt
 $plg_show_headline = 1;
-
-// Set a custom headline for the plugin and also for the announcements module.
-// The headline could also be a translation string e.g. SYS_HEADLINE
-$plg_headline = '';

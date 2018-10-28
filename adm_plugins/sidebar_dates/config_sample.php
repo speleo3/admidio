@@ -3,6 +3,9 @@
  ***********************************************************************************************
  * Configuration file for Admidio plugin Sidebar-Dates
  *
+ * Rename this file to config.php if you want to change some of the preferences below. The plugin
+ * will only read the parameters from config.php and not the example file.
+ *
  * @copyright 2004-2018 The Admidio Team
  * @see https://www.admidio.org/
  * @license https://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2.0 only
@@ -35,7 +38,7 @@ $plg_max_char_per_word = 0;
 // If you only want to show events of a special calendar you can list the calendars in this parameter
 // just use the following syntax $plg_kal_cat = array('calendar-name-1','calendar-name-2')
 // If you want to view all events just set $plg_kal_cat = array();
-$plg_kal_cat =  array('');
+$plg_kal_cat = array();
 
 // Soll die Überschrift des Plugins angezeigt werden
 // 1 = (Default) Überschrift wird angezeigt

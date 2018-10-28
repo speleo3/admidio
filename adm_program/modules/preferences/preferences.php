@@ -717,7 +717,7 @@ else
 $formSystemInformation->addStaticControl('directory_protection', $gL10n->get('SYS_DIRECTORY_PROTECTION'), $html);
 
 $postMaxSize = PhpIniUtils::getPostMaxSize();
-if($postMaxSize === -1)
+if(is_infinite($postMaxSize))
 {
     $html = getStaticText('warning', $gL10n->get('SYS_NOT_SET'));
 }
@@ -728,7 +728,7 @@ else
 $formSystemInformation->addStaticControl('post_max_size', $gL10n->get('SYS_POST_MAX_SIZE'), $html);
 
 $memoryLimit = PhpIniUtils::getMemoryLimit();
-if($memoryLimit === -1)
+if(is_infinite($memoryLimit))
 {
     $html = getStaticText('warning', $gL10n->get('SYS_NOT_SET'));
 }
@@ -749,7 +749,7 @@ else
 $formSystemInformation->addStaticControl('file_uploads', $gL10n->get('SYS_FILE_UPLOADS'), $html);
 
 $fileUploadMaxFileSize = PhpIniUtils::getFileUploadMaxFileSize();
-if($fileUploadMaxFileSize === -1)
+if(is_infinite($fileUploadMaxFileSize))
 {
     $html = getStaticText('warning', $gL10n->get('SYS_NOT_SET'));
 }
@@ -869,9 +869,9 @@ $formUserManagement->addCheckbox(
     array('helpTextIdInline' => 'MEM_ENABLE_USER_RELATIONS_DESC')
 );
 $html = '<a class="btn" href="'. ADMIDIO_URL. FOLDER_MODULES.'/userrelations/relationtypes.php"><img
-            src="'. THEME_URL. '/icons/user_administration.png" alt="'.$gL10n->get('SYS_MAINTAIN_USER_RELATION_TYPES').'" />'.$gL10n->get('SYS_MAINTAIN_USER_RELATION_TYPES').'</a>';
+            src="'. THEME_URL. '/icons/user_administration.png" alt="'.$gL10n->get('SYS_CONFIGURE_RELATIONSHIPS').'" />'.$gL10n->get('SYS_CONFIGURE_RELATIONSHIPS').'</a>';
 $htmlDesc = $gL10n->get('SYS_MAINTAIN_USER_RELATION_TYPES_DESC').'<div class="alert alert-warning alert-small" role="alert"><span class="glyphicon glyphicon-warning-sign"></span>'.$gL10n->get('ORG_NOT_SAVED_SETTINGS_LOST').'</div>';
-$formUserManagement->addCustomContent($gL10n->get('SYS_MAINTAIN_USER_RELATION_TYPES'), $html, array('helpTextIdInline' => $htmlDesc));
+$formUserManagement->addCustomContent($gL10n->get('SYS_CONFIGURE_RELATIONSHIPS'), $html, array('helpTextIdInline' => $htmlDesc));
 
 $formUserManagement->addSubmitButton(
     'btn_save_user_management', $gL10n->get('SYS_SAVE'),
@@ -1153,6 +1153,10 @@ $formMessages->addCheckbox(
 $formMessages->addInput(
     'mail_max_receiver', $gL10n->get('MAI_MAX_RECEIVER'), $formValues['mail_max_receiver'],
     array('type' => 'number', 'minNumber' => 0, 'maxNumber' => 9999, 'step' => 1, 'helpTextIdInline' => 'MAI_MAX_RECEIVER_DESC')
+);
+$formMessages->addCheckbox(
+    'mail_send_to_all_addresses', $gL10n->get('SYS_SEND_EMAIL_TO_ALL_ADDRESSES'), (bool) $formValues['mail_send_to_all_addresses'],
+    array('helpTextIdInline' => 'SYS_SEND_EMAIL_TO_ALL_ADDRESSES_DESC')
 );
 $formMessages->addCheckbox(
     'mail_show_former', $gL10n->get('MSG_SHOW_FORMER'), (bool) $formValues['mail_show_former'],

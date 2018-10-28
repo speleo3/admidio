@@ -3,6 +3,9 @@
  ***********************************************************************************************
  * Configuration file for Admidio plugin Birthday
  *
+ * Rename this file to config.php if you want to change some of the preferences below. The plugin
+ * will only read the parameters from config.php and not the example file.
+ *
  * @copyright 2004-2018 The Admidio Team
  * @see https://www.admidio.org/
  * @license https://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2.0 only
@@ -19,7 +22,7 @@ $plg_show_names_extern = 0;
 // 2 = Last name, First name (Mustermann, Hans)
 // 3 = First name (Hans)
 // 4 = Loginname (Hansi)
-$plg_show_names = 0;
+$plg_show_names = 1;
 
 // Show the age of the birthday person (only for registered users)
 // 0 - Don't show the age
@@ -56,7 +59,7 @@ $plg_link_target = '_self';
 
 // You can list role ids (comma separated) from which the birthday persons should
 // be searched. If no role is set than the plugin will search for all active members.
-// example value: '2,5,13'
+// example value: '(2,5,13)'
 $plg_rolle_sql = '';
 
 // In which sort order should the birthdays be listed?

@@ -186,7 +186,7 @@ switch($getMode)
 
                 case 'messages':
                     $checkboxes = array('enable_mail_module', 'enable_pm_module', 'enable_chat_module', 'enable_mail_captcha',
-                                        'mail_html_registered_users', 'mail_into_to', 'mail_show_former');
+                                        'mail_send_to_all_addresses', 'mail_html_registered_users', 'mail_into_to', 'mail_show_former');
                     break;
 
                 case 'photos':
@@ -346,6 +346,13 @@ switch($getMode)
         if($organization->getValue('org_id') > 0)
         {
             $gMessage->show($gL10n->get('INS_ORGA_SHORTNAME_EXISTS', array($_POST['orgaShortName'])));
+            // => EXIT
+        }
+
+        // allow only letters, numbers and special characters like .-_+@
+        if(!strValidCharacters($_POST['orgaShortName'], 'noSpecialChar'))
+        {
+            $gMessage->show($gL10n->get('SYS_FIELD_INVALID_CHAR', array('SYS_NAME_ABBREVIATION')));
             // => EXIT
         }
 
