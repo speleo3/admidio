@@ -12,7 +12,6 @@
                 require(ADMIDIO_PATH . FOLDER_PLUGINS . '/login_form/login_form.php');
                 require(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_online/sidebar_online.php');
                 require(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_dates/sidebar_dates.php');
-                require(ADMIDIO_PATH . FOLDER_PLUGINS . '/calender/calendar.php');
                 require(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_announcements/sidebar_announcements.php');
                 require(ADMIDIO_PATH . FOLDER_PLUGINS . '/sidebar_downloads/sidebar_downloads.php');
 
