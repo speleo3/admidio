@@ -257,7 +257,7 @@ $page->addHtml(getPreferencePanel('common', 'common', $gL10n->get('SYS_COMMON'),
 // PANEL: SECURITY
 
 $formSecurity = new HtmlForm(
-    'organization_preferences_form', safeUrl(ADMIDIO_URL.FOLDER_MODULES.'/preferences/preferences_function.php', array('form' => 'security')),
+    'security_preferences_form', safeUrl(ADMIDIO_URL.FOLDER_MODULES.'/preferences/preferences_function.php', array('form' => 'security')),
     $page, array('class' => 'form-preferences')
 );
 
@@ -1311,6 +1311,10 @@ $formEvents->addSelectBoxFromSql(
 $formEvents->addCheckbox(
     'dates_save_all_confirmations', $gL10n->get('DAT_SAVE_ALL_CONFIRMATIONS'), (bool) $formValues['dates_save_all_confirmations'],
     array('helpTextIdInline' => 'DAT_SAVE_ALL_CONFIRMATIONS_DESC')
+);
+$formEvents->addCheckbox(
+    'dates_may_take_part', $gL10n->get('SYS_MAYBE_PARTICIPATE'), (bool) $formValues['dates_may_take_part'],
+    array('helpTextIdInline' => $gL10n->get('SYS_MAYBE_PARTICIPATE_DESC', array('DAT_ATTEND', 'DAT_CANCEL', 'DAT_USER_TENTATIVE')))
 );
 $html = '<a class="btn" href="'. safeUrl(ADMIDIO_URL. FOLDER_MODULES.'/categories/categories.php', array('type' => 'DAT', 'title' => $gL10n->get('DAT_CALENDAR'))).'"><img
             src="'. THEME_URL. '/icons/application_view_tile.png" alt="'.$gL10n->get('DAT_SWITCH_TO_CALENDAR_ADMINISTRATION').'" />'.$gL10n->get('DAT_SWITCH_TO_CALENDAR_ADMINISTRATION').'</a>';
